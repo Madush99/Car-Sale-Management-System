@@ -1,0 +1,84 @@
+ <link rel="stylesheet" href="stylesheets/style4.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+    <link rel="apple-touch-icon" sizes="76x76" href="../public/images/apple-icon.png">
+  <link rel="icon" type="image/png" href="../public/images/favicon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- CSS Files -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../assets/css/now-ui-kit.css?v=1.3.0" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../assets/demo/demo.css" rel="stylesheet" />
+
+  <nav class="navbar navbar-expand-lg bg-dark fixed-top navbar-transparent " color-on-scroll="400">
+    <div class="container">
+     
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="http://localhost:3000/adminhome" rel="tooltip" title="Designed by Invision. Coded by Creative Tim" data-placement="bottom" target="_blank">
+       Finance Admin
+        </a>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end " id="navigation" data-nav-image="../public/images/blurred-image-1.jpg">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:3000/incomestat">Income Satements</a>
+          </li>
+        </ul>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end " id="navigation" data-nav-image="../public/images/blurred-image-1.jpg">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:3000/income">Income</a>
+          </li>
+        </ul>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end " id="navigation" data-nav-image="../public/images/blurred-image-1.jpg">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:3000/expeneses">Expenses</a>
+          </li>
+        </ul>
+      </div>
+     
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+<div class="gh">
+  
+ <table class="table table-striped w-50 p-3 " align="center">
+  <thead>
+    <h4 align="center">Income Satements</h4>
+    <tr>
+      <th scope="col" class="bg-dark text-primary">Year</th>
+      <th scope="col" class="bg-dark text-primary">Total Income</th>
+      <th scope="col" class="bg-dark text-primary">Total Expenses</th>
+      <th scope="col" class="bg-dark text-primary">Net Profit</th>
+       <th scope="col" class="bg-dark text-primary">Action</th>
+       <th scope="col" class="bg-dark text-primary">Report Generate</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    {{#each incomestat}}
+    <tr>
+      <th scope="row">{{this.year}}</th>
+      <td>{{this.income}}</td>
+      <td>{{this.expenses}}</td>
+      <td>{{this.netprofit}}</td>
+      <td><a href="/incomestat/viewincome/{{ this.id }}" ><button class="btn btn-dark text-primary">View</button></a></td>
+      <td><a href="/incomestat/NetprofitReport/{{ this.id }}" download ><button class="btn btn-dark text-primary">Generate Report</button></a></td>
+    </tr>
+    {{/each}}
+    
+  </tbody>
+</table>
+</div>

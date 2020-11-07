@@ -1,0 +1,111 @@
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    
+<div class="container">
+
+    <div class="row">
+
+        <h2>Update Vehicle</h2>
+        <br>
+          <br>
+            <br>
+
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8">
+
+
+           {{#each selVehidata}}
+
+            <form class="form-horizontal" method="post" action="/updateSelVehicle/{{this.ID}}">
+
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Brand</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputvehiid" placeholder="Brand ID" name="Brand"  value="{{this.Brand}}" >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Model </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputvehiid" placeholder="Model " name="Model" value="{{this.Model}}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputfirstname" class="col-sm-4 control-label">Model Year</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputmodel" placeholder="Model Year" name="ModelYear" value="{{this.ModelYear}}">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="inputfirstname" class="col-sm-2 control-label">ContactNo</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputmileage" placeholder="ContactNo" name="ContactNo" value="{{this.ContactNo}}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="input" class="col-sm-4 control-label">EngineCapacity</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputbrand" placeholder="EngineCapacity" name="EngineCapacity" value="{{this.EngineCapacity}}">
+                    </div>
+                </div>
+      <div class="form-group">
+                    <label for="inputname" class="col-sm-4 control-label">Availability</label>
+                    <div class="col-sm-10">
+                          <select id="inputname" name="Availability" class="form-control" value="{{this.Availability}}">
+
+                            <option value="Available">Available</option>
+                            <option value="Sold">Sold</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Price </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputcondition" placeholder="Price" name="Price" value="{{this.Price}}">
+                    </div>
+                </div>                
+
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Description </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputcapacity" placeholder=" Description" name="Description" value="{{this.Description}}">
+                    </div>
+                </div>
+
+             
+
+                <div class="form-group">
+                       <div class="col-sm-offset-2 col-sm-10">
+
+                           <button type = "submit" class="btn btn-success" id="addvehiclebtn"> Update Vehicle Details </button>
+
+                       </div> 
+
+                </div>
+
+
+            </form>
+
+            {{/each}}
+
+
+        </div>
+
+        <div class="col-md-2"></div>
+
+    </div>
+
+</div>
+
+

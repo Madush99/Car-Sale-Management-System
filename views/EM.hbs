@@ -1,0 +1,205 @@
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/style3.css">
+
+
+    
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <a class="navbar-brand" href="http://localhost:3000/view">Shashika Importors</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Vehicles <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Spare Parts</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:3000/">Add Employee</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:3000/table">Employee Table</a>
+      </li>
+    
+
+      
+       <li class="nav-item">
+        <a class="nav-link" href=" http://localhost:3000/salary">Add Salary </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:3000/salarytable">Salary Table</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:3000/login1">Login</a>
+      </li>
+
+     
+
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#"></a>
+      </li>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+
+    <center><h2>Add Employee</h2></center>
+<br>
+<br>
+<br>
+
+<div class="container">
+
+    <div class="row">
+
+        
+
+
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8">
+
+            <form class="form-horizontal" method="POST" action="/emp_login">
+
+                
+                <div class="form-group">
+                    <label for="inputname" class="col-sm-2 control-label">Emp</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputname" placeholder="Emp" name="EmpID" required>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="inputname" class="col-sm-2 control-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputname" placeholder="First Name" name="username" required>
+                    </div>
+                </div>
+
+                 <div class="form-group">
+                    <label for="inputname" class="col-sm-4 control-label">Post</label>
+                    <div class="col-sm-10">
+                          <select id="inputname" name="position" class="form-control" >
+
+                            <option value="Admin">Admin</option>
+                            <option value="Accountant">Accountant</option>
+                            <option value="Manager">Manager</option>
+                            <option value="Vehicle_Manager">Vehicle_Manager</option>
+                            <option value="Spare_Parts_Manager">Spare_Parts_Manager</option>
+                            <option value="Seller_Manager">Seller_Manager</option>
+
+                        </select>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="inputname" class="col-sm-4 control-label">Gender</label>
+                    <div class="col-sm-10">
+                          <select id="inputname" name="gender" class="form-control" >
+
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                          
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputname" class="col-sm-2 control-label">NIC</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputname" placeholder="NIC" name="nic" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputname" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputname" placeholder="Email" pattern="[^ @]*@[^ @]*" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputname" class="col-sm-2 control-label">Contact No</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputname" placeholder="Contact No" name="contactno" required>
+                    </div>
+                </div>
+
+                 <div class="form-group">
+                    <label for="inputname" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  placeholder="Password" name="password" required>
+                    </div>
+                </div>
+
+
+
+
+
+                 <div class="form-group">
+                    <label for="inputname" class="col-sm-4 control-label">Confirm password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="cnfirmpwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Confirm Password" name="confirm-password" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-success" id="addemployee" onclick="return Validate()">Add Employee</button>
+                    </div>
+                </div>
+
+            </form>
+
+                <hr>
+
+        
+
+         </div>
+
+        <div class="col-md-2"></div>
+
+    </div>
+
+</div>
+
+<hr>
+
+
+
+ <script type="text/javascript">
+    function Validate() {
+        var password = document.getElementById("pwd").value;
+        var confirmPassword = document.getElementById("cnfirmpwd").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        return true;
+    }
+</script>
+
+
+
+
+
+
+

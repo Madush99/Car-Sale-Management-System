@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #d7e6f1;
+  color: rgb(0, 0, 0);
+}
+</style>
+
+</head>
+			<h1 style="text-align: center; color:white; background-color:black">Vehicle Report</h1>
+			<address >
+				<p>SHASHIKA CAR SALE</p>
+				<p>Colombo RD,<br>KURUNEGALA</p>
+				<p>Sri Lanka</p>
+                 <p>0371234567</p>
+			</address>
+
+<body>
+
+<br><br><br><br><br><br>
+<table id="customers">
+ 
+<h1 style="text-align: left; color:white; background-color:rgb(170, 211, 238)">SELLERS</h1>
+
+
+          <thead>
+                <th >Emp Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>NIC</th>
+                <th>Contact No</th>         
+                      
+         </thead>
+
+        <tbody>
+
+
+            {{#each sellers}}
+            <tr>
+
+                <td>{{this.empid}}</td>
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.nic}}</td>
+                <td>{{this.contactno}}</td>
+
+            </tr>
+
+
+            {{/each}}
+
+
+</table>
+
+</body>
+</html>

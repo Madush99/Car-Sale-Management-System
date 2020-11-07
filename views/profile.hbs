@@ -1,0 +1,86 @@
+
+  <!-- Custom fonts for this template-->
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="Admin/css/sb-admin-2.min.css" rel="stylesheet">
+
+
+  <!-- Custom styles for this template-->
+  <link href="Admin/css/sb-admin-2.min.css" rel="stylesheet">
+
+
+  <div class="container" style="width:1000px;">
+
+    <div class="card o-hidden border-0 shadow-lg my-5">
+      <div class="card-body p-0">
+        <!-- Nested Row within Card Body -->
+        <div class="row">
+   
+          <div class="col-lg-7"  style="margin-left: 200px">
+            <div class="p-5">
+
+
+  {{#each res}}
+
+              <form class="user">
+                <div class="form-group">
+                  <input type="text" style="width: 500px" value="{{this.email}}" readonly  class="form-control form-control-user" name="Name" id="exampleInputEmail" placeholder="User Name" required>
+                </div>
+                <div class="form-group">
+                  <input type="email" style="width: 500px"  value="{{this.username}}" readonly class="form-control form-control-user" name="Email" id="exampleInputEmail" placeholder="Email Address" required>
+                </div>
+                                <div class="form-group">
+                  <input type="text" style="width: 500px"  value="{{this.NIC}}" readonly class="form-control form-control-user" name="nic"  placeholder="NIC" required>
+                </div>
+
+                                <div class="form-group">
+                  <input type="text" style="width: 500px" value="{{this.contactno}}" readonly class="form-control form-control-user" name="ContactNo"  placeholder="Contact" required>
+                </div>
+
+                                <div class="form-group">
+                  <input type="text" style="width: 500px" value="{{this.gender}}" readonly class="form-control form-control-user" name="Gender"  placeholder="Gender" required>
+                </div>
+  
+                <div class="form-group">
+                  <input type="text" style="width: 500px" value="{{this.position}}" readonly  class="form-control form-control-user" name="Password"  placeholder="Password" required>
+                </div>
+
+                <div class="form-group">
+                 <a href=""></a>
+                </div>
+
+                                <div class="form-group">
+                  <a href=""></a>
+                </div>
+      
+            <a  class="btn btn-primary" href="/editUserProfile/{{this.Id}}">Edit</a>
+                
+                 <a  class="btn btn-primary" href="/DeleteUserProfile/{{this.Id}}">Delete User profile</a>
+                <hr>
+   
+              </div>
+              </form>
+{{/each}}
+
+              <hr>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+    <!-- Bootstrap core JavaScript-->
+  <script src="Admin/vendor/jquery/jquery.min.js"></script>
+  <script src="Admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="Admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="Admin/js/sb-admin-2.min.js"></script>

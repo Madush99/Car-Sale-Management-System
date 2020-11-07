@@ -1,0 +1,55 @@
+<div class="container">
+  
+<br>
+<center><h2>Seller Details Table</h2></center>
+<br>
+</br>
+
+<div>
+    <div class="col-md-2"></div>
+
+</div>
+<div class="row">
+    <div class="col-md-8"></div>
+    <div class="col-md-12">
+
+    <table class="table table-hover">
+        
+  <thead>
+
+  
+    
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Seller Name</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Contact No</th>
+      <th scope="col">NIC</th>
+      <th scope="col">Email</th>
+      <th scope="col">User Name</th>
+   
+    </tr>
+  
+  </thead>
+
+  <tbody>
+    
+    {{#each users}}
+    <tr>
+      <td>{{this.Id}}</td>
+      <td>{{this.username}}</td>
+      <td>{{this.gender}}</td>
+      <td>{{this.contactno}}</td>
+      <td>{{this.NIC}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.position}}</td>
+      
+    </tr>
+    {{/each}}
+
+</tbody>
+        
+</table>
+</div>
+</div>
+</div>

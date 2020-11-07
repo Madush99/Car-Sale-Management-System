@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #d7e6f1;
+  color: rgb(0, 0, 0);
+}
+</style>
+
+</head>
+			<h1 style="text-align: center; color:white; background-color:black">Vehicle Report</h1>
+			<address >
+				<p>SHASHIKA CAR SALE</p>
+				<p>Colombo RD,<br>KURUNEGALA</p>
+				<p>Sri Lanka</p>
+                 <p>0371234567</p>
+			</address>
+
+<body>
+
+<br><br><br><br><br><br>
+<table id="customers">
+    
+<h1 style="text-align: left; color:white;background-color:rgb(170, 211, 238)">SPARE PARTS</h1>
+    <thead style=" width: 1000px;" > 
+
+            
+                <th style="width: 200px;">Product</th>
+                <th></th>
+                <th>Description</th>
+                <th>Model</th>
+                <th>Amount</th>         
+                   
+         </thead>
+
+        <tbody  id="table">
+
+         {{#each Shashika_Spare}}
+
+
+
+
+            <tr>
+
+<td><img alt="User Pic" style="height: 120px; width:200px;"  src="http://localhost:3000/img/{{this.photo}}" class="img-circle img-responsive"></td>
+
+            
+               
+                <td>{{this.email}}</td>
+                <td>{{this.brand_model}}</td>
+                <td>{{this.description}}</td>
+                <td>{{this.price}}</td>
+              
+
+            </tr>
+
+
+
+            {{/each}}
+
+
+
+         </tbody>
+
+</body>
+</html>

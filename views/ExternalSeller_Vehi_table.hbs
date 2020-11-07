@@ -1,0 +1,86 @@
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+
+<div class="container">
+
+ <div class="row" style="margin-left: -200px;">
+
+        <h2>Update Spare Parts</h2>
+
+        <div class="col-md-2"></div>
+
+            <div class="col-md-8">
+
+                <table class="table table-dark table-striped" style="width: 1000px;">
+
+                    <thead>
+                        <tr>
+                            <th scope="col">EXT spare image</th>
+                        <th scope="col">Item Code</th>
+                        <th scope="col">Item Name</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">Brand</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Contact Number</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Availability</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Condition</th>
+                        </tr>
+                       
+                        
+                    </thead>
+
+
+                        <tbody>
+
+                       
+                       {{#each extsellers}}
+                           <tr >
+                               <td><img style="height: 100px; width:100px;" src="http://localhost:3000/ExternalSpareSeller/{{this.ext_s_image}}" class="img-circle img-responsive"></td>
+                                <td>{{ this.item_code}}</td>
+                                <td>{{ this.item_name }}</td>
+                                <td>{{ this.model }}</td>
+                                <td>{{ this.brand }}</td>
+                                <td>{{ this.description }}</td>
+                                <td>{{ this.quantity }}</td>
+                                <td>{{ this.contact_no }}</td>
+                                <td>{{ this.location }}</td>
+                                <td>{{ this.availability }}</td>
+                                <td>{{ this.price }}</td>
+                                <td>{{ this.s_condition }}</td>
+                           
+                                
+                                <td>
+                                    <br>
+                                    <a href="/tableEdit/{{this.item_code}}"><button class ="btn btn-primary"> Edit</button></a>
+                                    </br>
+                                    <br>
+                                    <a href="/ExternaldeleteSparepart/{{this.item_code}}"><button class ="btn btn-primary"> Delete</button></a>
+                                    </br>
+                                    </td>
+                                
+                                </td>
+                                </tr> 
+
+
+                            
+                        {{/each}}
+
+
+                            
+                        
+
+                        </tbody>
+
+            </table>
+    
+            </div>
+    </div>
+</div>
+
+</div>

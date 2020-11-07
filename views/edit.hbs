@@ -1,0 +1,125 @@
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+
+<div class="container">
+
+    <div class="row">
+
+        <h2>Update Spare Parts</h2>
+
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8">
+
+            
+            {{#each extsellers}}
+            <form class="form-horizontal" method="post" action="/edit_spare/{{this.item_code}}">
+                <div class="form-group">
+                    <label for="inputfirstname" class="col-sm-2 control-label">Item Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputitemname" placeholder= "Spare Part Name" name="name" value="{{ this.item_name }}">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="inputfirstname" class="col-sm-2 control-label">Model</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputmodel" placeholder="Model" name="smodel" value="{{ this.model }}">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Brand</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputbrand" placeholder="Brand" name="brand" value="{{ this.brand }}">
+                    </div>
+                </div>
+
+
+                 <div class="form-group">
+                    <label for="inputfirstname" class="col-sm-2 control-label">Description</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputmdescription" placeholder="Description" name="sdescription" value="{{ this.description }}">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Quantity</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputquantity" placeholder="Quantity" name="qty" value="{{ this.quantity }}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Contact Number</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputcontact" placeholder="Contact Number" name="contact" value="{{ this.contact_no }}">
+                    </div>
+                </div>                
+
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Location</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputlocation" placeholder="Location" name="slocation" value="{{ this.location }}">
+                    </div>
+                </div>
+
+                              
+
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Availability</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputavailability" placeholder="Availability" name="savailability" value="{{ this.availability }}">
+                    </div>
+                </div> 
+
+
+                 <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Price</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputprice" placeholder="Price" name="sprice" value="{{ this.price }}">
+                    </div>
+                </div>
+
+                
+                            
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Condition</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputdcondition" placeholder="Condition" name="scondition" value="{{ this.s_condition }}">
+                    </div>
+                </div> 
+
+
+                <div class="form-group">
+                       <div class="col-sm-offset-2 col-sm-10">
+
+                          <button type = "submit" class="btn btn-success" id="addsparepartbtn"> Update Spare Parts</button>
+
+                       </div> 
+
+                </div>
+
+
+            </form>
+            {{/each}}
+
+
+
+        </div>
+
+        <div class="col-md-2"></div>
+
+    </div>
+
+
+
+
+   
+
+

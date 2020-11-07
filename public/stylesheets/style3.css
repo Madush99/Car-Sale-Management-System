@@ -1,0 +1,24 @@
+
+
+.custome-card {
+  padding-top: 100px;
+}
+
+.padding-top{
+  padding-top: 80px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.button{
+  padding-top: 80px;
+}
+
+.customeButton {
+  width: 300px;
+  height: 200px;
+  font-size: 40px;
+  background-color:dark;
+  color: dark;
+}
+

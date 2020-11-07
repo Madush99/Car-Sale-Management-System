@@ -1,0 +1,115 @@
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/style3.css">
+    <title>{{ title }}</title>
+
+   
+
+
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <a class="navbar-brand" href="http://localhost:3000/view">Shashika Importors</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Vehicles <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Spare Parts</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:3000/">Add Employee</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:3000/table">Employee Table</a>
+      </li>
+     
+
+      
+       <li class="nav-item">
+        <a class="nav-link" href=" http://localhost:3000/salary">Add Salary </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:3000/salarytable">Salary Table</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:3000/login1">Login</a>
+      </li>
+
+     
+
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#"></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+    
+
+    <center><h2>Salary Table</h2></center>
+<br>
+<br>
+<br>
+<div class="row">
+
+    <div class="col-md-1"></div>
+    <div class="col-md-11">
+
+        <table class="table table-hover">
+            <thead>
+            <tr>
+               
+                    <th scope="col">Employee_Name</th>
+                     <th scope="col">Month</th>
+                    <th scope="col">Basic_Salary</th>
+                    <th scope="col">Account No</th>
+                    <th scope="col">Bank Name</th>
+                    <th scope="col">Working_Days</th>
+                    <th scope="col">Post</th>
+                    <th scope="col">Date</th>
+            </tr>
+            </thead>
+         <tbody>
+             
+              {{#each salary}}
+            <tr>
+                    <td>{{ this.Employee_Name}}</td>
+                    <td>{{ this.Month }}</td>
+                    <td>Rs.{{ this.Basic_Salary }}</td>
+                    <td>{{ this.Account_No }}</td>
+                    <td>{{ this.Bank_Name }}</td>
+                    <td>{{ this.Working_Days }}</td>
+                    <td>{{ this.Post }}</td>
+                    <td>{{ this.Date }}</td>
+               
+                    <td>
+                         
+                     <a href="/salarytable/updatesalary/{{ this.id }}"><button class="btn btn-primary">Edit</button></a>
+                     <a href="/salarytable/deletesalary/{{ this.id }}"><button class="btn btn-primary">Delete</button></a>
+                    </td>
+            </tr>
+        {{/each}}
+       
+        </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+

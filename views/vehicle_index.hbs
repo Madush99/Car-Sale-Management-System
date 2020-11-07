@@ -1,0 +1,238 @@
+<link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+
+            
+<link href="vehicle_styl/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vehicle_styl/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vehicle_styl/css/prettyPhoto.css" rel="stylesheet">
+    <link href="vehicle_styl/css/price-range.css" rel="stylesheet">
+    <link href="vehicle_styl/css/animate.css" rel="stylesheet">
+	<link href="vehicle_styl/css/main.css" rel="stylesheet">
+	<link href="vehicle_styl/css/responsive.css" rel="stylesheet">
+
+
+
+<div class="container">
+
+    <div class="row">
+
+        <h2>Add Vehicle</h2>
+
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8">
+
+            
+
+            <form class="form-horizontal" method="Post" action="/addvehicle" enctype="multipart/form-data">
+
+            <h4>
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Vehicle ID</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputvehiid" placeholder="Vehicle ID" name="id">
+                    </div>
+                </div>
+
+                        
+
+                <div class="form-group">
+                    <label for="inputfirstname" class="col-sm-2 control-label">Model</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputmodel" placeholder="Vehicle Model" name="model" required>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="inputfirstname" class="col-sm-2 control-label">Model Year</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputmodel" placeholder="Model Year" name="model_year" required>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="inputfirstname" class="col-sm-2 control-label">Mileage</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputmileage" placeholder="Mileage" required name="mileage">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Brand</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputbrand" placeholder="Brand" required name="brand">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputname" class="col-sm-2 control-label">Fuel Type</label>
+                    <div class="col-sm-10">
+                          <select id="inputfuel" name="fuel_type" class="form-control" required>
+
+                            <option value="Diesel">Diesel</option>
+                            <option value="Petrol">Petrol</option>
+                            <option value="Electric">Electric</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Condition</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputcondition" placeholder="Condition" required name="vehi_condition">
+                    </div>
+                </div>                
+
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Engine Capacity</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputcapacity" placeholder="Engine Capacity" required name="engine_capacity">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Color</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputcolor" placeholder="Color" required name="color">
+                    </div>
+                </div>                
+
+                <div class="form-group">
+                    <label for="inputname" class="col-sm-2 control-label">Availability</label>
+                    <div class="col-sm-10">
+                          <select id="inputname" name="availability" class="form-control" required>
+
+                            <option value="Available">Available</option>
+                            <option value="Sold">Sold</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Price</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputprice" placeholder="Price" required name="price">
+                    </div>
+                </div> 
+
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">Description</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputdescription" placeholder="Description" required name="description">
+                    </div>
+                </div> 
+
+
+                  <div class="form-group">
+                            <label for="input" class="col-md-2 control-label">Profile Image</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="file" name="uploaded_image" accept=""/>
+                            </div>
+                        </div>   
+
+
+                <div class="form-group">
+                       <div class="col-sm-offset-2 col-sm-10">
+
+                           <button type = "submit" class="btn btn-success" id="addvehiclebtn"> Add Vehicle</button>
+
+                       </div> 
+
+                </div>
+
+</h4>
+            </form>
+
+
+
+
+        </div>
+
+        <div class="col-md-2"></div>
+
+    </div>
+
+
+
+
+    <div class="row">
+
+       
+
+        <div class="col-md-2"></div>
+
+            <div class="col-md-8">
+
+                <table class="table table-hover" style="width:1000px;">
+
+                    <thead>
+                        <th>Images</th>
+                        <th>Vehicle Id</th>
+                        <th>Model</th>
+                        <th>Model Year</th>
+                        <th>Mileage</th>
+                        <th>Brand</th>
+                        <th>Fuel Type</th>
+                        <th>Condition</th>
+                        <th>Engine Capacity</th>
+                        <th>Color</th>
+                        <th>Availability</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        
+                       
+
+                    </thead>
+
+
+                        <tbody>
+
+                    {{#each vehicles}}    
+
+                            <tr >
+                                <td><img style=" height:100px; width:100px;" src="http://localhost:3000/vehiclesimages/{{this.vehi_image}}" class="img-circle img-responsive"></td>
+                                <td>{{this.id}}</td>
+                                <td>{{this.model}}</td>
+                                <td>{{this.model_year}}</td>
+                                <td>{{this.mileage}}</td>
+                                <td>{{this.brand}}</td>
+                                <td>{{this.fuel_type}}</td>
+                                <td>{{this.vehi_condition}}</td>
+                                <td>{{this.engine_capacity}}</td>
+                                <td>{{this.color}}</td>
+                                <td>{{this.availability}}</td>
+                                <td>{{this.price}}</td>
+                                <td>{{this.description}}</td>
+                                
+                                
+                                <td>
+                                 <a href="/editvehi/{{ this.id }}"><button class ="btn btn-primary">Edit</button></a>
+                                
+
+                                 <a href="/deleteVehicle/{{ this.id }}"><button class ="btn btn-primary">Delete</button></a>
+                                </td>
+                                
+                                
+
+
+                            </tr>
+                        {{/each}}
+
+                        
+
+                        </tbody>
+
+            </table>
+    
+            </div>
+    </div>
+</div>
+
+  
+

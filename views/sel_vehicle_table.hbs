@@ -1,0 +1,72 @@
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    
+    <div class="row">
+
+    <div class="col-md-0"></div>
+    <div class="col-md-12">
+
+        <center><h2>Employee Table</h2></center>
+        <br>
+        <br>
+        <br>
+           
+        <table class="table table-hover">
+             
+            <thead>
+               
+            <tr>
+                <th scope="col">ID </th>
+                    <th scope="col">Image </th>
+                    <th scope="col">Brand </th>
+                    <th scope="col">Model </th>
+                     <th scope="col">ModelYear </th>
+                    <th scope="col">ContactNo</th>
+                    <th scope="col"> EngineCapacity</th>
+                    <th scope="col"> Availabilit</th>
+                    <th scope="col">Price </th>
+                    <th scope="col">Description</th>
+                    
+            </tr>
+            </thead>
+         <tbody>
+             {{#each sel_vehicle}}
+            <tr>
+
+                 <td>{{ this.ID  }}</td>
+                 <td><img style=" height:100px; width:100px;" src="http://localhost:3000/selVehiclesimages/{{this.Image}}" class="img-circle img-responsive"></td>
+
+                    
+                    <td>{{ this.Brand}}</td>
+                    <td>{{ this.Model}}</td>
+                    <td>{{ this.ModelYear}}</td>
+                    <td>{{this.ContactNo}}</td>
+                    <td>{{this.EngineCapacity}}.cc</td>
+                    <td>{{this.Availability}}</td>
+                    <td>Rs.{{this.Price}}.00</td>
+                    <td>{{this.Description}}</td>
+                   
+
+                    <td>
+                         
+                    <a href="/updateSelVehicle/{{this.ID}}"><button class="btn btn-primary">Edit</button></a>
+                    <a href="/deleteSelVehicle/{{this.ID}}"><button class="btn btn-primary">Delete</button></a>
+                    </td>
+            </tr>
+            {{/each}}
+       
+        </tbody>
+        </table>
+
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
